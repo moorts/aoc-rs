@@ -1,6 +1,7 @@
 use std::collections::{BinaryHeap, HashMap};
+use std::fmt::Display;
 
-pub fn part1(input: &str) -> i32 {
+pub fn part1(input: &str) -> impl Display {
     let lines = input.lines();
 
     let mut left_heap = BinaryHeap::new();
@@ -25,7 +26,7 @@ pub fn part1(input: &str) -> i32 {
     return total;
 }
 
-pub fn part2(input: &str) -> i32 {
+pub fn part2(input: &str) -> impl Display {
     let lines = input.lines();
 
     let mut frequencies = HashMap::new();
