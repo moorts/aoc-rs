@@ -1,16 +1,18 @@
-use aoc_rs::day1::*;
+use aoc_rs::day2::*;
 use std::io::Read;
 
 use std::fs::File;
 
 fn main() -> std::io::Result<()> {
-    let mut file = File::open("../input/day1/input.txt")?;
+    let input = include_str!("../input/day2/input.txt");
+    let example = include_str!("../input/day2/example.txt");
 
-    let mut data = String::new();
-    file.read_to_string(&mut data)?;
-
-    println!("{}", part1(&data));
-    println!("{}", part2(&data));
+    println!("Part1:");
+    println!("Example: {}", part1(&example));
+    println!("Input: {}", part1(&input));
+    println!("Part2:");
+    println!("Example: {}", part2(&example));
+    println!("Input: {}", part2(&input));
 
     Ok(())
 }
